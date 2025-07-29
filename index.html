@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sabores de mi Tierra - Inicio</title>
   <link rel="stylesheet" href="inicio.css" />
+  <style>
+    body {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 2s ease-out, transform 2s ease-out;
+    }
+
+    body.loaded {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+  <script>
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+      const sonidoEntrada = new Audio('campana.mp3');
+      sonidoEntrada.play();
+    });
+  </script>
 </head>
 <body>
 
@@ -21,9 +40,10 @@
 <main>
   <section class="info-box info-1">
     <h2>Bienvenidos a...</h2>
-    <img src="logo.png" width="350"
-      height="300">
+    <img src="logo.png" width="350" height="300">
+  </section>
 </main>
 
 </body>
 </html>
+
